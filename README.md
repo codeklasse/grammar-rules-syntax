@@ -1,1 +1,1 @@
-Hail to the king 👑
+Die relevante, [aktuelle Datei](/Emoji-Bedeutung-v2-+-Aufgaben-+-Codebeispiele.md) 🗒️.
