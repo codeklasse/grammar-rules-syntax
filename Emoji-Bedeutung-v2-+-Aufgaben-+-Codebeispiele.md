@@ -19,6 +19,7 @@ X in Variable speichern.
 # Ausgabe
 - 💬              // Textausgabe
 - 🔊 / 📢         // Tonausgabe
+- 🤖 🔊           // Text2Speech 
 - 📡              // Broadcast: Nachricht an alle senden
 
 ## Codebeispiel
@@ -27,6 +28,7 @@ X aus Variable auf unterschiedliche Art ausgeben.
 ```
 🗃️ ➡️ 💬
 🗃️ ➡️ 🔊
+🗃️ ➡️ 🤖 🔊
 🗃️ ➡️ 📢
 🗃️ ➡️ 📡
 ```

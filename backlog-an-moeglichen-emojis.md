@@ -22,6 +22,7 @@ ___
 
 # Datenabfrage- /gleich
 - ⚖️               // Vergleich ?
+- ↔️               // Vergleich ?
 - 🟰              // "Heavy equals sign" emoji <- If approved in September 2021, this emoji will arrive on most platforms by the middle of 2022. 
 - 🔍              // Vergleich ?
 - 👀              // Vergleich ?
