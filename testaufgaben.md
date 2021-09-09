@@ -5,18 +5,41 @@ Frag nach einer Texteingabe.
 Gib den Text 10x aus.
 
 ```
+💬 "Gib einen Text ein"
 📝 ➡️ 🗃️
 
 🔁 10
     🗃️ ➡️ 💬 
 ```
 
-### b.
-Gib den Text so lange aus bis eine beliebige Taste gedrückt wird.
-- Keine Ahnung wie so etwas funktionieren würde.
+### Ideen
 
 ```
-⌨️ ⬇️ 👀
+💬 "Gib einen Text ein"
+📝 ➡️ 🗃️
+```
+
+oder 
+```
+
+📝 "Gib einen Text ein" ➡️ 🗃️
+```
+
+### b.
+Gib den Text so lange aus bis eine beliebige Taste gedrückt wird.
+
+```
+📝 "Gib einen Text ein" ➡️ 🗃️
+
+🔁 
+    ⌨️ ⬇️ 👀
+        🗃️ ➡️ 💬 
+```
+
+Die Augen behalten die Tastatur/ den Bildschirm im Blick und reagieren auf Mausclick oder Tastenanschlag
+
+```
+⌨️ ⬇️ 👀  
 ```
 
 ## 2.
@@ -25,6 +48,36 @@ Sortier die Namen nach Zeichenlänge & gib sie mit Text2Speech aus.
 
 ```
 📝📝📝 ➡️ 🗃️
+
+🔁 🗃️
+    📁 📈 📁 
+    📁 ➡️  
+
+
+🗃️ ➡️ 🤖 🔊 
+```
+
+a.
+```
+🗃️
+    🔁 📁 📈 📏 ➡️ 🗃️ 
+```
+
+b.
+```
+🔁 🗃️
+    📁 📈 📏 ➡️ 🗃️ 
+```
+
+c.
+```
+🗃️ 🔁 📁 📈 📏 ➡️ 🗃️ 
+```
+
+### Alternativ
+
+```
+📝"Erster Name" 📝"Zweiter Name" 📝"Dritter Name" ➡️ 🗃️
 
 🔁 10
     🗃️ ➡️ 🤖 🔊 
@@ -101,6 +154,29 @@ Wenn nicht, zeig ein Bild von einem traurigen Welpen.
 ```
 📝🔢 📝🔢 ➡️ 🗃️
 
+❓
+    👍
+        🖼️🐶
+    👎
+        🖼️🐕
+```
+
+Mit Hilfe von 🖼️ & einem Argument dahinter können Bilder aus einer vordefinierten Gallerie ausgegeben werden.
+Gibt Bild eines Hundes aus.
+
+```
+🖼️🐕
+🖼️🐱
+🖼️🐼
+```
+
+Es könnte eingestellt werden das es z.B. drei Slots gibt in denen eigen angelegte Bilder gespeichert werden.
+Damit könnte der Nutzerspeicher dynamisch referenziert werden.
+
+```
+🖼️🖥️1
+🖼️🖥️2
+🖼️🖥️3
 ```
 
 ## 6.
