@@ -6,7 +6,7 @@ Emoji {
     * INPUT
     */
     Input 
-    = Input_Emoji+ Arrow_Right Variable_Emoji                                                              -- No_Type
+    = Input_Emoji+ Arrow_Right Variable_Emoji                                                                -- No_Type
     | (Input_Emoji (Type_Numeric_Emoji | Type_String_Emoji) Type_Required_Emoji)+ Arrow_Right Variable_Emoji -- Type_Required
     
     Input_Emoji = ":memo:" | "📝" | ":microphone:" | "🎤" | ":microphone_studio:" | "🎙️" | ":camera_with_flash:" | "📸" | ":camera:" | "📷" | ":framed_picture:" | "🖼️"
@@ -14,14 +14,18 @@ Emoji {
     /*
     * OUTPUT
     */
-    Output = Variable_Emoji Arrow_Right Output_Emoji
+    Output
+    = Variable_Emoji Arrow_Right Output_Emoji -- From_Variable
+    | Output_Emoji String  -- From_String
     
     Output_Emoji = ":speech:" | "💬" | ":loud_sound:" | "🔊" | ":megaphone:" | "📢" | ":robot:" | "🤖" | ":satellite:" | "📡"
     
     /*
     * VARIABLE
     */
-    Variable = Variable_Emoji Arrow_Left Input_Emoji+
+    Variable 
+    = Variable_Emoji Arrow_Left Input_Emoji+              -- Normal
+    | Random_Emoji (Type_Numeric_Emoji | Type_String_Emoji) Arrow_Right Variable_Emoji -- Assign_Random
 
     Variable_Emoji = ":cardfilebox:" | "🗃️"
     
@@ -49,12 +53,24 @@ Emoji {
     Type_Numeric_Emoji = ":1234:" | "🔢"
     Type_String_Emoji = ":abc:" | "🔤"
     
+    /*
+    * HELPERS
+    */
     Arrow_Right = ":arrow_right:" | "➡️"
     Arrow_Left = ":arrow_left:" | "⬅️"
 
+    Random_Emoji = ":twisted_rightwards_arrows:" | "🔀"
+
     // 'letter' is a built-in Ohm-type
+    String 
+    = "\"" Letters "\"" -- Letters
+    | "\"" ListOf<any, any>"\"" -- Letters_Special_Characters
+    | "\"" alnum* "\"" -- Letters_Numbers
+    | "\"" (alnum | any) * "\"" -- Letters_Special_Characters_Numbers
+    | "\"" (alnum | any) * "\"" -- Every_String
+    
     Letters = letter+
-    SpecialCharacters = "!" | "?" | "<" | ">" | "§" | "$" | "&" | "/" | "," | ";" | "." | ":" | "_" | "#" | "'" | "~" | "|" | "^" | "′"
+    specialCharacters = "!" | "?" | "<" | ">" | "§" | "$" | "&" | "/" | "," | ";" | "." | ":" | "_" | "#" | "'" | "~" | "|" | "^" | "′"
     
     ident  (an identifier)
     = letter alnum*
