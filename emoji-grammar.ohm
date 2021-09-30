@@ -1,29 +1,58 @@
 Emoji {
-    // Unsicher ob + notwendig/ sinnvoll/ gut ist
+    // Unsicher ob '+' notwendig/ sinnvoll/ gut ist
     Functionality = Input+ | Output+ | Variable+ | Condition+ | Loop+
-        
-    Input = Input_Emoji+ Arrow_Right Variable_Emoji
-    Output = Variable_Emoji Arrow_Right Output_Emoji
-	Variable = Variable_Emoji Arrow_Left Input_Emoji+
-    Condition = Condition_Identifier_Emoji
-    Loop = Loop_Emoji        
 
-    Arrow_Right = ":arrow_right:" | "➡️"
-    Arrow_Left = ":arrow_left:" | "⬅️"
-
+    /*
+    * INPUT
+    */
+    Input 
+    = Input_Emoji+ Arrow_Right Variable_Emoji                                                              -- No_Type
+    | (Input_Emoji (Type_Numeric_Emoji | Type_String_Emoji) Type_Required_Emoji)+ Arrow_Right Variable_Emoji -- Type_Required
+    
     Input_Emoji = ":memo:" | "📝" | ":microphone:" | "🎤" | ":microphone_studio:" | "🎙️" | ":camera_with_flash:" | "📸" | ":camera:" | "📷" | ":framed_picture:" | "🖼️"
+
+    /*
+    * OUTPUT
+    */
+    Output = Variable_Emoji Arrow_Right Output_Emoji
+    
     Output_Emoji = ":speech:" | "💬" | ":loud_sound:" | "🔊" | ":megaphone:" | "📢" | ":robot:" | "🤖" | ":satellite:" | "📡"
-	Variable_Emoji = ":cardfilebox:" | "🗃️"
+    
+    /*
+    * VARIABLE
+    */
+    Variable = Variable_Emoji Arrow_Left Input_Emoji+
+
+    Variable_Emoji = ":cardfilebox:" | "🗃️"
+    
+    /*
+    * CONDITION
+    */
+    Condition = Condition_Identifier_Emoji
 
     Condition_Identifier_Emoji = ":question:" | "❓"
     Condition_True_Emoji = ":thumbs_up:" | "👍"
     Condition_False_Emoji = ":thumbs_down:" | "👎"
-    
+
+    /*
+    * LOOP
+    */
+    Loop = Loop_Emoji
+
     Loop_Emoji = ":repeat:" | "🔁"
  
+    /*
+    * TYPES
+    */
+    Type_Required_Emoji = ":exclamation:" | "❗"
+
+    Type_Numeric_Emoji = ":1234:" | "🔢"
+    Type_String_Emoji = ":abc:" | "🔤"
     
-    // TextOrNumeric =  letter+ number* | number+ letter*
-    // letter is provided natively by Ohm
+    Arrow_Right = ":arrow_right:" | "➡️"
+    Arrow_Left = ":arrow_left:" | "⬅️"
+
+    // 'letter' is a built-in Ohm-type
     Letters = letter+
     SpecialCharacters = "!" | "?" | "<" | ">" | "§" | "$" | "&" | "/" | "," | ";" | "." | ":" | "_" | "#" | "'" | "~" | "|" | "^" | "′"
     

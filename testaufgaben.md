@@ -198,7 +198,7 @@ Zufälligen Wert aus Variable ausgeben?
 
 Zufälligen Wert, der zwischen Werten der Variable liegt, ausgeben?
 ```
-      🔀       ➡️ 💬
+🔀       ➡️ 💬
 🗃️[#1]  🗃️[#2] 
 ```
 
