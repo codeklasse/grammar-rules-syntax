@@ -18,8 +18,8 @@ X in Variable speichern.
 
 # Ausgabe
 - 💬              // Textausgabe
-- 🔊 / 📢         // Tonausgabe
-- 🤖 🔊           // Text2Speech 
+- 🔊 / 📢         // Tonausgabe - was heißt "Tonausgabe"?
+- 🤖           // Text2Speech 
 - 📡              // Broadcast: Nachricht an alle senden
 
 ## Codebeispiel
@@ -28,11 +28,10 @@ X aus Variable auf unterschiedliche Art ausgeben.
 ```
 🗃️ ➡️ 💬
 🗃️ ➡️ 🔊
-🗃️ ➡️ 🤖 🔊
+🗃️ ➡️ 🤖
 🗃️ ➡️ 📢
 🗃️ ➡️ 📡
 ```
-
 # Datenspeicherung
 Ein Typ von Variable.
 Keine Unterscheidung zwischen Datentypen & Anzahl der gespeicherten Elemente.
@@ -174,3 +173,5 @@ x == string ? if true: loop: {
 ---
 Wenn 🔤 leer ist, dann hat die Ausgabe ein beispielsweise leeres Blatt Papier.
 ABER es gibt eine Ausgabe!
+
+

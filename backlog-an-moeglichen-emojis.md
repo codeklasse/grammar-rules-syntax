@@ -78,3 +78,5 @@ Sorg dafür, dass du deinem Roboter den Namen eines Klassenkameraden und eine Gr
     👎:
         🔤 ➡️ 💬 // ("Dieser Name ist nicht in der Klassenliste")
 ```
+
+:loud_sound:

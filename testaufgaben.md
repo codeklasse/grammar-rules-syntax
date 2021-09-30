@@ -54,7 +54,7 @@ Sortier die Namen nach Zeichenlänge & gib sie mit Text2Speech aus.
     📁 ➡️  
 
 
-🗃️ ➡️ 🤖 🔊 
+🗃️ ➡️ 🤖 
 ```
 
 a.
@@ -80,7 +80,7 @@ c.
 📝"Erster Name" 📝"Zweiter Name" 📝"Dritter Name" ➡️ 🗃️
 
 🔁 10
-    🗃️ ➡️ 🤖 🔊 
+    🗃️ ➡️ 🤖 
 ```
 
 ## 3.
