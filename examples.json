@@ -153,5 +153,15 @@
         "text": "🗃️ ⚖️ 🗃️ ❓ \n    👍",
         "startRule": "",
         "shouldMatch": true
+    },
+    {
+        "text": "🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🗃️\n\n🗃️ ⚖️ [EMPTY] ❓\n    👍\n        📝 ➡️ 🗃️ \n        \n[EMPTY] ⚖️ 🗃️ ❓\n    👍\n        📝 ➡️ 🗃️ ",
+        "startRule": "",
+        "shouldMatch": true
     }
 ]
