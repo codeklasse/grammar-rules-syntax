@@ -1,5 +1,5 @@
 Emoji {
-    Functionality = Input+ | Output+ | Variable+ | Condition+ | Loop+
+    Functionality = Functionality+ | Input | Output | Condition | Variable | Loop
 
     /*
     * INPUT
@@ -23,15 +23,17 @@ Emoji {
     * VARIABLE
     */
     Variable 
-    = Variable_Emoji Arrow_Left Input_Emoji+              -- Normal
-    | Random_Emoji (Type_Numeric_Emoji | Type_String_Emoji) Arrow_Right Variable_Emoji -- Assign_Random
+    = Variable_Emoji Arrow_Left Input_Emoji+                                           -- Normal
+    | Random_Emoji (Type_Numeric_Emoji | Type_String_Emoji) Arrow_Right Variable_Emoji -- Add_Random_Value
+    | Variable_Emoji                                                                   -- Empty
+
 
     Variable_Emoji = ":cardfilebox:" | "🗃️"
     
     /*
     * CONDITION
     */
-    Condition = Variable_Emoji Compare_Operator_Emoji Variable_Emoji Condition_Identifier_Emoji
+    Condition = Compare_Value Compare_Operator_Emoji Compare_Value Condition_Identifier_Emoji (Condition_Flow | end)
     Condition_Flow
     = (Condition_True_Emoji Functionality Condition_False_Emoji Functionality | Condition_False_Emoji Functionality Condition_True_Emoji Functionality)  -- Double_Path
     | (Condition_True_Emoji | Condition_False_Emoji) Functionality                                      -- Single_Path
@@ -41,14 +43,28 @@ Emoji {
     Condition_True_Emoji = ":thumbs_up:" | "👍"
     Condition_False_Emoji = ":thumbs_down:" | "👎"
 
-    Compare_Operator_Emoji = ":balance_scale:" | "⚖️"
+    Compare_Operator_Emoji 
+    = ":balance_scale:" | "⚖️" 
+    | ":equals:" | "="
+    |":chart_with_downwards_trend:"
+    | "📉" | ":chart_with_upwards_trend:"
+    | "📈"
+    
+    // Begriffe in [] beziehen sich auf Variablen
+    // Wird ggf. separiert werden müssen
+    Compare_Value = Variable_Emoji | Compare_Value_Emoji
+
+    Compare_Value_Emoji
+    = "[NOT_EMPTY]" | "[EMPTY]"
+    | "[FIRST]" | "[MIDDLE]" | "[LAST]"
 
     /*
     * LOOP
     */
     Loop
-    = Loop_Emoji Condition Condition_Flow  -- Action_Loop
-    | Loop_Emoji Condition                 -- Empty_Loop
+    = Loop_Emoji Integer Functionality          -- Timed_Loop
+    | Loop_Emoji Condition Condition_Flow       -- Condition_Loop
+    | Loop_Emoji (Integer | Condition)          -- Empty_Loop
 
     Loop_Emoji = ":repeat:" | "🔁"
      
@@ -69,6 +85,7 @@ Emoji {
     Type_String_Emoji = ":abc:" | "🔤"
 
     String = "\"" (alnum | specialCharacters)* "\""
+    Integer = number+
     
     Letters = letter+
     specialCharacters = "!" | "?" | "<" | ">" | "§" | "$" | "&" | "/" | "," | ";" | "." | ":" | "_" | "#" | "'" | "~" | "|" | "^" | "′"

@@ -85,3 +85,37 @@
         💬 "Falsch geraten!"
     👍
         💬 "Richtig geraten!"
+
+📝📝📝 ➡️ 🗃️
+
+🔁 10
+    🗃️ ➡️ 💬 
+
+🔁 10
+
+💬 "Gib einen Text ein"
+📝 ➡️ 🗃️
+
+🔁 10
+    🗃️ ➡️ 💬 
+
+🗃️ ⚖️ 🗃️ ❓ 
+
+🗃️ ⚖️ 🗃️ ❓ 
+    👍
+
+🗃️ ⚖️ 🗃️ ❓
+    👍
+        💬 "Richtig geraten!"
+
+🗃️
+
+🗃️
+
+🗃️ ⚖️ [EMPTY] ❓
+    👍
+        📝 ➡️ 🗃️ 
+        
+[EMPTY] ⚖️ 🗃️ ❓
+    👍
+        📝 ➡️ 🗃️ 

@@ -1,11 +1,6 @@
 [
     {
-        "text": "📷 ➡️ 🗃️\n🎤 ➡️ 🗃️\n🎙️ ➡️ 🗃️\n🖼️ ➡️ 🗃️",
-        "startRule": "",
-        "shouldMatch": true
-    },
-    {
-        "text": "🗃️ ➡️ 💬\n🗃️ ➡️ 🔊\n🗃️ ➡️ 🤖\n🗃️ ➡️ 📢\n🗃️ ➡️ 📡",
+        "text": "🗃️ ➡️ 💬\n🗃️ ➡️ 🔊\n🗃️ ➡️ 🤖\n🗃️ ➡️ 📢\n🗃️ ➡️ 📡\n",
         "startRule": "",
         "shouldMatch": true
     },
@@ -121,6 +116,41 @@
     },
     {
         "text": "🔁\n    🗃️ ⚖️ 🗃️ ❓\n    👎 \n        💬 \"Soll funktionieren!\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "📝📝📝 ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁 10\n    🗃️ ➡️ 💬 ",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁 10",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "💬 \"Gib einen Text ein\"\n\n📝 ➡️ 🗃️\n\n🔁 10\n    🗃️ ➡️ 💬 ",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🗃️ ⚖️ 🗃️ ❓ \n",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🗃️ ⚖️ 🗃️ ❓\n    👍\n        💬 \"Richtig geraten!\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🗃️ ⚖️ 🗃️ ❓ \n    👍",
         "startRule": "",
         "shouldMatch": true
     }
