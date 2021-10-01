@@ -1,0 +1,127 @@
+[
+    {
+        "text": "📷 ➡️ 🗃️\n🎤 ➡️ 🗃️\n🎙️ ➡️ 🗃️\n🖼️ ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🗃️ ➡️ 💬\n🗃️ ➡️ 🔊\n🗃️ ➡️ 🤖\n🗃️ ➡️ 📢\n🗃️ ➡️ 📡",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "📝 ➡️ 🗃️\n📷 ➡️ 🗃️\n🎤 ➡️ 🗃️\n🎙️ ➡️ 🗃️\n🖼️ ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "📝🔢❗➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "📝🔤❗➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "📝🔢❗ 📝🔢❗ ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔀 🔢 ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🗃️ ➡️ 💬",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "📝🔢❗ 📝🔤❗ ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "📝🔤❗ 📝🔤❗ ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "📝🔤❗ 📝🔢❗ ➡️ 🗃️\n",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "💬 \"Richtig geraten!\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁\n    🗃️ ⚖️ 🗃️ ❓\n    👍\n        💬 \"Richtig geraten!\"\n    👎\n        💬 \"Falsch geraten!\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "💬 \"Richtig geraten\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "💬 \"123\"\n",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "💬 \"abc 123\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "💬 \"123 abc\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "💬 \"!123 abc!\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "💬 \"123! abc!\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁\n    🗃️ ⚖️ 🗃️ ❓",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁\n    🗃️ ⚖️ 🗃️ ❓ 👍  💬 \"Richtig geraten!\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁\n    🗃️ ⚖️ 🗃️ ❓\n    👍 ",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁\n    🗃️ ⚖️ 🗃️ ❓\n    👎",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁\n    🗃️ ⚖️ 🗃️ ❓\n    👎\n        💬 \"Falsch geraten!\"\n    👍\n        💬 \"Richtig geraten!\"",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
+        "text": "🔁\n    🗃️ ⚖️ 🗃️ ❓\n    👎 \n        💬 \"Soll funktionieren!\"",
+        "startRule": "",
+        "shouldMatch": true
+    }
+]

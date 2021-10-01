@@ -1,5 +1,4 @@
 Emoji {
-    // Unsicher ob '+' notwendig/ sinnvoll/ gut ist
     Functionality = Input+ | Output+ | Variable+ | Condition+ | Loop+
 
     /*
@@ -32,27 +31,27 @@ Emoji {
     /*
     * CONDITION
     */
-    Condition = Condition_Identifier_Emoji
+    Condition = Variable_Emoji Compare_Operator_Emoji Variable_Emoji Condition_Identifier_Emoji
+    Condition_Flow
+    = (Condition_True_Emoji Functionality Condition_False_Emoji Functionality | Condition_False_Emoji Functionality Condition_True_Emoji Functionality)  -- Double_Path
+    | (Condition_True_Emoji | Condition_False_Emoji) Functionality                                      -- Single_Path
+    | (Condition_True_Emoji | Condition_False_Emoji)                                      -- Empty_Path
 
     Condition_Identifier_Emoji = ":question:" | "❓"
     Condition_True_Emoji = ":thumbs_up:" | "👍"
     Condition_False_Emoji = ":thumbs_down:" | "👎"
 
+    Compare_Operator_Emoji = ":balance_scale:" | "⚖️"
+
     /*
     * LOOP
     */
-    Loop = Loop_Emoji
+    Loop
+    = Loop_Emoji Condition Condition_Flow  -- Action_Loop
+    | Loop_Emoji Condition                 -- Empty_Loop
 
     Loop_Emoji = ":repeat:" | "🔁"
- 
-    /*
-    * TYPES
-    */
-    Type_Required_Emoji = ":exclamation:" | "❗"
-
-    Type_Numeric_Emoji = ":1234:" | "🔢"
-    Type_String_Emoji = ":abc:" | "🔤"
-    
+     
     /*
     * HELPERS
     */
@@ -61,13 +60,15 @@ Emoji {
 
     Random_Emoji = ":twisted_rightwards_arrows:" | "🔀"
 
-    // 'letter' is a built-in Ohm-type
-    String 
-    = "\"" Letters "\"" -- Letters
-    | "\"" ListOf<any, any>"\"" -- Letters_Special_Characters
-    | "\"" alnum* "\"" -- Letters_Numbers
-    | "\"" (alnum | any) * "\"" -- Letters_Special_Characters_Numbers
-    | "\"" (alnum | any) * "\"" -- Every_String
+    /*
+    * TYPES
+    */
+    Type_Required_Emoji = ":exclamation:" | "❗"
+
+    Type_Numeric_Emoji = ":1234:" | "🔢"
+    Type_String_Emoji = ":abc:" | "🔤"
+
+    String = "\"" (alnum | specialCharacters)* "\""
     
     Letters = letter+
     specialCharacters = "!" | "?" | "<" | ">" | "§" | "$" | "&" | "/" | "," | ";" | "." | ":" | "_" | "#" | "'" | "~" | "|" | "^" | "′"

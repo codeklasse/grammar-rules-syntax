@@ -40,13 +40,48 @@
 
 💬 Richtig geraten!
 
+💬 "Richtig geraten"
+
+💬 "123"
+
+💬 "abc 123"
+
+💬 "123 abc"
+
+💬 "!123 abc!"
+
+💬 "123! abc!"
+
+🔁
+    🗃️ ⚖️ 🗃️ ❓
+
+🔁
+    🗃️ ⚖️ 🗃️ ❓ 👍  💬 "Richtig geraten!"
+
+🔁
+    🗃️ ⚖️ 🗃️ ❓
+    👍
+        💬 "Richtig geraten!"
+
+🔁
+    🗃️ ⚖️ 🗃️ ❓
+    👍 
+
+🔁
+    🗃️ ⚖️ 🗃️ ❓
+    👎 
+        💬 "Soll funktionieren!"
+
 🔁
     🗃️ ⚖️ 🗃️ ❓
     👍
         💬 "Richtig geraten!"
     👎
-        🗃️ 📈 🗃️ ❓
-            👍
-                💬 "Geratene Zahl zu groß"
-            👎
-                💬 "Geratene Zahl zu klein"
+        💬 "Falsch geraten!"
+
+🔁
+    🗃️ ⚖️ 🗃️ ❓
+    👎
+        💬 "Falsch geraten!"
+    👍
+        💬 "Richtig geraten!"
