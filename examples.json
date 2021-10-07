@@ -1,10 +1,5 @@
 [
     {
-        "text": "🗃️ ➡️ 💬\n🗃️ ➡️ 🔊\n🗃️ ➡️ 🤖\n🗃️ ➡️ 📢\n🗃️ ➡️ 📡\n",
-        "startRule": "",
-        "shouldMatch": true
-    },
-    {
         "text": "📝 ➡️ 🗃️\n📷 ➡️ 🗃️\n🎤 ➡️ 🗃️\n🎙️ ➡️ 🗃️\n🖼️ ➡️ 🗃️",
         "startRule": "",
         "shouldMatch": true
@@ -25,7 +20,7 @@
         "shouldMatch": true
     },
     {
-        "text": "🔀 🔢 ➡️ 🗃️",
+        "text": "🔀 🔢 ➡️ 🗃️\n\n🔀 🔢 🔢 ➡️ 🗃️",
         "startRule": "",
         "shouldMatch": true
     },
@@ -163,5 +158,30 @@
         "text": "🗃️\n\n🗃️ ⚖️ [EMPTY] ❓\n    👍\n        📝 ➡️ 🗃️ \n        \n[EMPTY] ⚖️ 🗃️ ❓\n    👍\n        📝 ➡️ 🗃️ ",
         "startRule": "",
         "shouldMatch": true
+    },
+    {
+        "text": "\n🔀 🔢 🔢 🔢 ➡️ 🗃️\n",
+        "startRule": "",
+        "shouldMatch": false
+    },
+    {
+        "text": "🔀 🔢 🔤 ➡️ 🗃️\n",
+        "startRule": "",
+        "shouldMatch": false
+    },
+    {
+        "text": "🔀 🔤 🔢 ➡️ 🗃️\n",
+        "startRule": "",
+        "shouldMatch": false
+    },
+    {
+        "text": "🔀 🔤 🔤 ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": false
+    },
+    {
+        "text": "🔀 🔤 ➡️ 🗃️",
+        "startRule": "",
+        "shouldMatch": false
     }
 ]

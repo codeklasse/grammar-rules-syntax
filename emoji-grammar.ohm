@@ -6,7 +6,7 @@ Emoji {
     */
     Input 
     = Input_Emoji+ Arrow_Right Variable_Emoji                                                                -- No_Type
-    | (Input_Emoji (Type_Numeric_Emoji | Type_String_Emoji) Type_Required_Emoji)+ Arrow_Right Variable_Emoji -- Type_Required
+    | (Input_Emoji (Type_Numeric_Emoji | Type_String_Emoji) Type_Required_Emoji ?)+ Arrow_Right Variable_Emoji -- Type_Required
     
     Input_Emoji = ":memo:" | "📝" | ":microphone:" | "🎤" | ":microphone_studio:" | "🎙️" | ":camera_with_flash:" | "📸" | ":camera:" | "📷" | ":framed_picture:" | "🖼️"
 
@@ -23,9 +23,11 @@ Emoji {
     * VARIABLE
     */
     Variable 
-    = Variable_Emoji Arrow_Left Input_Emoji+                                           -- Normal
-    | Random_Emoji (Type_Numeric_Emoji | Type_String_Emoji) Arrow_Right Variable_Emoji -- Add_Random_Value
-    | Variable_Emoji                                                                   -- Empty
+    = Variable_Emoji Arrow_Left Input_Emoji+        -- Normal
+    // "Random_String" bislang deaktiviert
+    | Random_Number Arrow_Right Variable_Emoji      -- Right_Side_Add_Random_Value
+    | Variable_Emoji Arrow_Left Random_Number       -- Left_Side_Add_Random_Value
+    | Variable_Emoji                                -- Empty
 
 
     Variable_Emoji = ":cardfilebox:" | "🗃️"
@@ -74,6 +76,9 @@ Emoji {
     Arrow_Right = ":arrow_right:" | "➡️"
     Arrow_Left = ":arrow_left:" | "⬅️"
 
+    Random_Number = Random_Emoji Type_Numeric_Emoji Type_Numeric_Emoji ?
+    // Wie würde "Random_String" aussehen? Was würde passieren? 
+    Random_String = Random_Emoji Type_String_Emoji
     Random_Emoji = ":twisted_rightwards_arrows:" | "🔀"
 
     /*
@@ -84,7 +89,10 @@ Emoji {
     Type_Numeric_Emoji = ":1234:" | "🔢"
     Type_String_Emoji = ":abc:" | "🔤"
 
-    String = "\"" (alnum | specialCharacters)* "\""
+    String
+    = "\"" (alnum | specialCharacters)* "\"" -- Double_Quoutes
+    | (alnum | specialCharacters)* -- No_Double_Quoutes
+
     Integer = number+
     
     Letters = letter+
