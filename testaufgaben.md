@@ -54,7 +54,7 @@ Sortier die Namen nach Zeichenlänge & gib sie mit Text2Speech aus.
     📁 ➡️  
 
 
-🗃️ ➡️ 🤖 🔊 
+🗃️ ➡️ 🤖 
 ```
 
 a.
@@ -69,10 +69,6 @@ b.
     📁 📈 📏 ➡️ 🗃️ 
 ```
 
-c.
-```
-🗃️ 🔁 📁 📈 📏 ➡️ 🗃️ 
-```
 
 ### Alternativ
 
@@ -80,7 +76,7 @@ c.
 📝"Erster Name" 📝"Zweiter Name" 📝"Dritter Name" ➡️ 🗃️
 
 🔁 10
-    🗃️ ➡️ 🤖 🔊 
+    🗃️ ➡️ 🤖 
 ```
 
 ## 3.
@@ -91,7 +87,7 @@ Falls ja, schreib deinen Namen darein.
 ```
 🗃️
 
-🗃️ ⚖️ [leer] ❓
+🗃️ ⚖️ [EMPTY] ❓
     👍
         📝 ➡️ 🗃️ 
 ```
@@ -198,7 +194,7 @@ Zufälligen Wert aus Variable ausgeben?
 
 Zufälligen Wert, der zwischen Werten der Variable liegt, ausgeben?
 ```
-      🔀       ➡️ 💬
+🔀       ➡️ 💬
 🗃️[#1]  🗃️[#2] 
 ```
 
