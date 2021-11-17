@@ -1,5 +1,10 @@
 [
     {
+        "text": "🗃️",
+        "startRule": "",
+        "shouldMatch": true
+    },
+    {
         "text": "📝 ➡️ 🗃️\n📷 ➡️ 🗃️\n🎤 ➡️ 🗃️\n🎙️ ➡️ 🗃️\n🖼️ ➡️ 🗃️",
         "startRule": "",
         "shouldMatch": true
